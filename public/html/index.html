@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between; background: #333; color: white; padding: 10px;">
+        <div>
+            <a href="#" onclick="$('#content').load('public/html/student.html');" style="color:white; margin-right:15px;">Студент</a>
+        </div>
+        <div>
+            {{.Displayname}} | {{.Date}} | <a href="/logout" style="color:white;">Выход</a>
+        </div>
+    </div>
+    <div id="content" style="padding:20px;">
+        <h3>Добро пожаловать, {{.Displayname}}!</h3>
+        <p>Выберите пункт меню для работы</p>
+    </div>
+    <div id="floatstudentinfo" style="position:fixed; top:50px; right:10px; background:yellow; padding:5px;"></div>
+    <input type="hidden" id="floatstudentid" value="">
+    <div id="dwait" title="Ждите..." style="display:none;">Загрузка...</div>
+</body>
+</html>
