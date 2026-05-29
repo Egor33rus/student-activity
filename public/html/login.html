@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="width:300px; margin:100px auto; text-align:center">
+        <h2>Вход в систему</h2>
+        {{if .LoginError}}<p style="color:red">Неверный логин или пароль!</p>{{end}}
+        <form method="post" action="/">
+            <input type="text" name="Username" placeholder="Логин" style="width:100%; margin:5px 0; padding:8px;"><br>
+            <input type="password" name="Password" placeholder="Пароль" style="width:100%; margin:5px 0; padding:8px;"><br>
+            <input type="hidden" name="Login" value="Let me in!">
+            <button type="submit" style="margin-top:10px; padding:8px 20px;">Войти</button>
+        </form>
+        <p>Тестовый пользователь: mal / parol</p>
+    </div>
+</body>
+</html>
